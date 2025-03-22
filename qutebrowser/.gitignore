@@ -1,0 +1,7 @@
+*
+
+!*/
+!.gitignore
+!.config/qutebrowser/config.py
+!.config/qutebrowser/userscripts/**
+!.config/qutebrowser/greasemonkey/**
