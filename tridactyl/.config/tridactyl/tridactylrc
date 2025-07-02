@@ -1,0 +1,30 @@
+" colourscheme
+colourscheme dracula
+
+" search urls
+set searchurls.prs https://bitbucket.org/libertrium/workspace/pull-requests/?user_filter=WATCHING&query=%s
+set searchurls.yt https://www.youtube.com
+set searchurls.yts https://www.youtube.com/results?search_query=%s
+set searchurls.mt https://monkeytype.com
+set searchurls.wpp https://web.whatsapp.com/
+set searchurls.gpt https://chat.openai.com/?model=gpt-4&q=%s
+
+setnull searchurls.bing
+setnull searchurls.duckduckgo
+setnull searchurls.scholar
+setnull searchurls.youtube
+
+" search keybinds
+unbind <C-f>
+bind / fillcmdline find
+bind ? fillcmdline find --reverse
+bind n findnext --search-from-view
+bind N findnext --search-from-view --reverse
+bind gn findselect
+bind gN composite findnext --search-from-view --reverse; findselect
+bind ,<Space> nohlsearch
+
+" tab keybinds
+bind gd tabdetach
+bind gD composite tabduplicate; tabdetach
+

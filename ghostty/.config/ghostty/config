@@ -1,7 +1,5 @@
 window-decoration = none
 
-window-padding-x = 10
-window-padding-y = 5
 window-padding-balance = true
 
 font-family = "JetBrainsMono Nerd Font"
@@ -11,6 +9,16 @@ theme = "nordic"
 # disable default keybinds
 keybind = ctrl+enter=unbind
 keybind = ctrl+shift+e=unbind
+keybind = alt+one=unbind
+keybind = alt+two=unbind
+keybind = alt+three=unbind
+keybind = alt+four=unbind
+keybind = alt+five=unbind
+keybind = alt+six=unbind
+keybind = alt+seven=unbind
+keybind = alt+eight=unbind
+keybind = alt+nine=unbind
+keybind = alt+f4=unbind
 
 background-opacity = 0.85
 

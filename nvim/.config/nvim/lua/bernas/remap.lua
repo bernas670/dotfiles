@@ -14,9 +14,18 @@ map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
 -- yank remaps
+map("n", "Y", "y$")
 map("n", "<leader>y", '"+y')
 map("v", "<leader>y", '"+y')
 map("v", "<leader>Y", '"+Y')
+
+-- center screen when jumping
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+
+-- better indenting in visual mode
+map("v", "<", "<gv")
+map("v", ">", ">gv")
 
 -- replace current word
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

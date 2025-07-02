@@ -34,6 +34,8 @@ return {
 				map("<leader>ds", telescope.lsp_document_symbols, "[D]ocument [S]ymbols")
 				map("<leader>ws", telescope.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+
+        map("<leader>dl", "<cmd>Telescope diagnostics<cr>", "[D]iagnostics [L]ist")
 			end,
 		})
 
@@ -83,6 +85,17 @@ return {
 						},
 					})
 				end,
+        ["tsserver"] = function()
+          require("lspconfig")["ts_ls"].setup({
+            capabilities = lsp_defaults.capabilities,
+            init_options = {
+              preferences = {
+                importModuleSpecifier = "relative",
+                importModuleSpecifierPreference = "relative",
+              }
+            }
+          })
+        end,
 			},
 		})
 	end,
