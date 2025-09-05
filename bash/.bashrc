@@ -27,8 +27,6 @@ shopt -s checkwinsize
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -65,7 +63,9 @@ esac
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+if command -v ng &> /dev/null; then
+  source <(ng completion script)
+fi
 
 # homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -116,8 +116,11 @@ if command -v nvim >/dev/null 2>&1; then
     export EDITOR='nvim'
 fi
 
+export PATH=/home/bernas/.opencode/bin:$PATH
+
 # Start gnome-keyring-daemon for SSH
 # if [ -n "$DESKTOP_SESSION" ]; then
 #     eval $(gnome-keyring-daemon --start --components=ssh)
 #     export SSH_AUTH_SOCK
 # fi
+eval "$(~/.local/bin/mise activate)"

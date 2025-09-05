@@ -30,6 +30,7 @@ vim.opt.termguicolors = true
 vim.opt.showmatch = true
 vim.opt.matchtime = 2
 vim.opt.signcolumn = "yes"
+vim.opt.winborder = "single"
 
 -- file settings
 vim.opt.undofile = true
@@ -37,3 +38,4 @@ vim.opt.undodir = vim.fn.expand("~/.vim/undodir")
 vim.opt.updatetime = 50
 vim.opt.autoread = true
 vim.opt.autowrite = false
+vim.opt.swapfile = false

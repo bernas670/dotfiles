@@ -36,6 +36,7 @@ return {
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
         map("<leader>dl", "<cmd>Telescope diagnostics<cr>", "[D]iagnostics [L]ist")
+        map("<leader>dh", function() vim.diagnostic.open_float(0, {scope="cursor"}) end, "Hover Diagnostics")
 			end,
 		})
 

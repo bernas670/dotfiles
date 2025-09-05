@@ -22,17 +22,21 @@ return {
 			},
 			pickers = {
 				find_files = { hidden = true },
-                buffers = {
-                    sort_mru = true,
-                    path_display = { "smart" }
-                }
+        buffers = {
+            sort_mru = true,
+            path_display = { "smart" }
+        },
+        live_grep = {
+          additional_args = {"--hidden"}
+        },
 			},
 		})
 		vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files)
 		vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers)
 		vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags)
-		vim.keymap.set("n", "<leader>fs", function()
-			require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
-		end)
+    vim.keymap.set("n", "<leader>fs", require("telescope.builtin").live_grep)
+		-- vim.keymap.set("n", "<leader>fs", function()
+		-- 	require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
+		-- end)
 	end,
 }
