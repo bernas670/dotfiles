@@ -1,6 +1,8 @@
 alias vim='nvim'
 alias v='nvim'
 
+alias xclip='xclip -selection clipboard'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
