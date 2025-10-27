@@ -1,0 +1,87 @@
+:root {
+  /* --tab-min-height: 24px !important; */
+  --tabbar-height: 42px !important;
+}
+
+/* no stupid large buttons in right-click menu */
+menupopup > #context-navigation { display: none !important; }
+menupopup > #context-sep-navigation { display: none !important; }
+
+/* Remove titlebar spacers */
+hbox.titlebar-spacer {
+  display: none !important;
+}
+
+/* Remove titlebar buttons */
+#alltabs-button, #firefox-view-button {
+  display: none !important;
+}
+
+/* Remove tab bar borders */
+#tabbrowser-tabs {
+  border: 0 !important;
+  margin: 0 !important;
+}
+
+/* Show tab index number before title */
+tab.tabbrowser-tab {
+  counter-increment: tab-counter;
+}
+.tabbrowser-tab .tab-icon-stack {
+  display: flex;
+  align-items: center;
+}
+.tabbrowser-tab .tab-icon-stack::before {
+  content: counter(tab-counter);
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 2px solid white;
+  font-weight: bold;
+}
+
+/* Show close button only on hover */
+.tabbrowser-tab .tab-close-button {
+  display: none !important;
+}
+.tabbrowser-tab:hover .tab-close-button {
+  display: inline-flex !important;
+}
+
+/* /* reduce tab height */ */
+/* #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container { */
+/*   height: auto !important; */
+/* } */
+/* .tabbrowser-tab { */
+/*   --tab-min-height: 20px !important; */
+/* } */
+
+
+/* remove border below tab bar */
+#navigator-toolbox {
+  border: 0 !important;
+  border-bottom-width: 0px !important;
+}
+
+#nav-bar {
+  /* position: absolute !important; */
+  /* top: -100px; */
+  /* width: 100%; */
+  /* visibility: collapse; */
+}
+
+#navigator-toolbox:focus-within > #nav-bar,
+#navigator-toolbox:hover > #nav-bar,
+#nav-bar:focus-within
+{
+  /* top: var(--tabbar-height) !important; */
+  /* visibility: visible; */
+}
+
+#urlbar-container {
+  height: 40px;
+}
+
+
+
+/* remove url pop-ups https://github.com/tridactyl/tridactyl/issues/40 */
+statuspanel[type="overLink"]{display: none !important;}
