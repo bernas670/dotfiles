@@ -6,6 +6,9 @@ font-family = "JetBrainsMono Nerd Font"
 font-size = 14
 theme = "nordic"
 
+# 
+macos-option-as-alt=true
+
 # disable default keybinds
 keybind = ctrl+enter=unbind
 keybind = ctrl+shift+e=unbind
@@ -20,5 +23,5 @@ keybind = alt+eight=unbind
 keybind = alt+nine=unbind
 keybind = alt+f4=unbind
 
-background-opacity = 0.85
+# background-opacity = 0.85
 
